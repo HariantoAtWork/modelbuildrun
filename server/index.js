@@ -22,7 +22,8 @@ async function start() {
     await builder.build()
   }
 
-  fastify.use(nuxt.render)
+  fastify.register(require('../api')(io), { prefix: '/api' })
+  fastify.setNotFoundHandler(({ req }, { res }) => nuxt.render(req, res))
 
   fastify.listen(port, host, (err, address) => {
     if (err) {
