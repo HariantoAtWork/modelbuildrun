@@ -16,7 +16,7 @@
     "axios": "^0.19.2",
     "cross-env": "^5.2.0",
     "fastify": "^1.13.3",
-    "nuxt": "^2.0.0",
+    "nuxt": "^2.15.8",
     "socket.io": "^2.3.0"
   },
   "devDependencies": {
